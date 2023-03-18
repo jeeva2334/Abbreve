@@ -140,13 +140,13 @@ const Form = () => {
             </div>
           )}
 
-          {isUserInputBlank && (
-            <div className="mt-4">
-              <p className="text-purple dark:text-deeppurple">
-                Search bar 🔍 is Empty! Please input a slang.
-              </p>
-            </div>
-          )}
+{isUserInputBlank && (
+  <div className="mt-4 bg-red-100 dark:bg-red-800 p-4">
+    <p className="text-red-700 dark:text-red-200">
+      Search bar 🔍 is Empty! Please input a slang.
+    </p>
+  </div>
+)}
 
           {errorMessage && (
             <div className="mt-4 p-3 lg:absolute">
