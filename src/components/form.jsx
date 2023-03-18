@@ -105,7 +105,7 @@ const Form = () => {
               <input
                 type="text"
                 placeholder="Search slang full meaning..."
-                className="flex-1 w-[14rem] h-11 rounded-full ml-2 border-none outline-none placeholder:text-gray bg-ash"
+                className="bg-deeppurple text-red flex-1 w-[14rem] h-11 rounded-full ml-2 border-none outline-none placeholder:text-gray bg-ash"
                 value={userInput}
                 onChange={(e) =>
                   setUserInput(e.target.value.toLocaleLowerCase())
@@ -116,7 +116,7 @@ const Form = () => {
             <button
               onClick={fetchData}
               disabled={isLoading || !hasUserInputChanged}
-              className="bg-deeppurple text-ash font-bold rounded-xl hover:scale-110 p-2 mt-4 md:mt-0 items-center flex justify-center h-[50px] min-w-[100px] w-full md:w-auto">
+              className="bg-deeppurple text-red font-bold rounded-xl hover:scale-110 p-2 mt-4 md:mt-0 items-center flex justify-center h-[50px] min-w-[100px] w-full md:w-auto">
               {isLoading ? <LoadingSpinner /> : "Search"}
             </button>
           </form>
@@ -128,7 +128,7 @@ const Form = () => {
                   {data.definition}
                 </p>
               </div>
-              <div className="mt-2 text-gray font-bold text-md ml-2 dark:text-gray">
+              <div className="mt-2 text-red font-bold text-md ml-2 dark:text-red">
                 <p>{data.alternatives}</p>
               </div>
             </div>
